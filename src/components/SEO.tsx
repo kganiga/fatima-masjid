@@ -17,15 +17,15 @@ const SEO = ({
         name="keywords"
         content={
           keywords ||
-          "Fatima Masjid, Proddatur, Mosque, Namaz,Masjid,BuddayaPalli, Prayer"
+          "Fatima Masjid, Fathima Masjid, Proddatur, Mosque, Namaz,Masjid,BuddayaPalli, Prayer"
         }
       />
-      <meta name="author" content="Fatima Masjid Proddatur" />
+      <meta name="author" content="Fatima Masjid, Proddatur" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta
         property="og:image"
-        content="https://fatimamasjidproddatur.vercel.app/your-image.jpg"
+        content="https://fatimamasjidproddatur.vercel.app/resources/fatima-masjid.png"
       />
       <meta
         property="og:url"
