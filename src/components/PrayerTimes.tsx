@@ -45,7 +45,7 @@ const PrayerTimes: React.FC = () => {
   }, []);
 
   return (
-    <div className="py-16 px-4 bg-white text-center" id="prayer-times">
+    <div className="py-16 px-4 bg-white text-center" >
       {/* Header */}
       {/* 
       <h1 className="text-5xl font-bold text-black my-4">
