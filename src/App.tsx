@@ -15,55 +15,59 @@ import Footer from "./components/Footer";
 
 function App() {
   const defaultTitle = "Fatima Masjid - Proddatur";
-  const defaultDescription = "Fatima Masjid, Proddatur - A place of peace and worship.";
+  const defaultDescription =
+    "Fatima Masjid, Proddatur - A place of peace and worship.";
 
   const [currentTitle, setCurrentTitle] = useState(defaultTitle);
-  const [currentDescription, setCurrentDescription] = useState(defaultDescription);
+  const [currentDescription, setCurrentDescription] =
+    useState(defaultDescription);
 
   // Section Data
   const sections = [
     { id: "hero", component: <HeroSection />, seoDescription: "" },
     {
       id: "about",
-      component: <About />, 
+      component: <About />,
       title: "About Us",
-      seoDescription: "Learn more about Fatima Masjid and its history."
+      seoDescription: "Learn more about Fatima Masjid and its history.",
     },
     {
       id: "prayer-times",
       component: (
         <>
           <PrayerTimesSection />
-          <RamadanTimings />
         </>
       ),
       title: "Our Namaz Timings",
-      seoDescription: "Check the daily prayer times and Ramadan schedule at Fatima Masjid."
+      seoDescription:
+        "Check the daily prayer times and Ramadan schedule at Fatima Masjid.",
     },
     {
       id: "quran",
-      component: <DailyQuranVerse />, 
+      component: <DailyQuranVerse />,
       title: "Quran Verse",
-      seoDescription: "Daily inspirational Quran verses for reflection and guidance."
+      seoDescription:
+        "Daily inspirational Quran verses for reflection and guidance.",
     },
     {
       id: "gallery",
-      component: <Gallery />, 
+      component: <Gallery />,
       title: "Gallery",
-      seoDescription: "Explore the beautiful moments captured at Fatima Masjid."
+      seoDescription:
+        "Explore the beautiful moments captured at Fatima Masjid.",
     },
     {
       id: "services",
-      component: <ServicesSection />, 
+      component: <ServicesSection />,
       title: "Our Services",
-      seoDescription: "Discover the various services offered by Fatima Masjid."
+      seoDescription: "Discover the various services offered by Fatima Masjid.",
     },
     {
       id: "location",
-      component: <LocationSection />, 
+      component: <LocationSection />,
       title: "Find Us",
-      seoDescription: "Find Fatima Masjid's location and get directions."
-    }
+      seoDescription: "Find Fatima Masjid's location and get directions.",
+    },
   ];
 
   // Smooth Scroll Navigation
@@ -115,11 +119,18 @@ function App() {
             key={section.id}
             id={section.id}
             className={`w-full py-24 px-6 relative overflow-hidden transition-all duration-300 
-              ${index % 2 === 0 ? "bg-white dark:bg-gray-800" : "bg-gray-100 dark:bg-gray-900"}`}
+              ${
+                index % 2 === 0
+                  ? "bg-white dark:bg-gray-800"
+                  : "bg-gray-100 dark:bg-gray-900"
+              }`}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            variants={{ hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0, transition: { duration: 0.7 } } }}
+            variants={{
+              hidden: { opacity: 0, y: 40 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.7 } },
+            }}
           >
             {section.title && (
               <motion.h2
@@ -139,7 +150,10 @@ function App() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          variants={{ hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0, transition: { duration: 0.7 } } }}
+          variants={{
+            hidden: { opacity: 0, y: 40 },
+            visible: { opacity: 1, y: 0, transition: { duration: 0.7 } },
+          }}
         >
           <Footer />
         </motion.section>
